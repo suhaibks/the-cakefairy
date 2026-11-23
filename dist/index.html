@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse cakes and prices from The CakeFairy, Haifa Thasneem’s home bakery in Somwarpet, Kodagu. Pre-order through WhatsApp.">
+  <meta name="theme-color" content="#fff5f7">
+  <link rel="icon" href="images/cakefairy-logo.jpg" type="image/jpeg">
+  <link rel="preload" href="fonts/bakery-serif.otf" as="font" type="font/otf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    if (location.hash === "#menu") {
+      history.replaceState(history.state, "", location.pathname + location.search);
+    }
+    if (!location.hash) {
+      history.scrollRestoration = "manual";
+      window.addEventListener("pageshow", (event) => {
+        if (!event.persisted && !location.hash) {
+          window.scrollTo({ top: 0, behavior: "instant" });
+        }
+      });
+    }
+  </script>
+  <script src="/navigation.js" defer></script>
+  <script src="enquiry-image.js" defer></script>
+  <script src="bakery.js" defer></script>
+  <title>The CakeFairy · Home Bakery</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="shell header-inner">
+      <a class="wordmark" href="#top" aria-label="The CakeFairy home">
+        <img class="brand-logo" src="images/cakefairy-logo.jpg" alt="" width="150" height="150">
+        <span>The CakeFairy<small>H O M E  B A K E R Y</small></span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="header-content" hidden>
+        <span class="nav-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+      <nav class="header-content" id="header-content" aria-label="Main navigation">
+        <a href="/gallery">Gallery</a>
+        <a href="#cake-menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQs</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="shell hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="little-star" aria-hidden="true">✳</span> A SMALL-BATCH HOME BAKERY</div>
+        <h1 id="hero-title">Something<br>sweet from<br><em>my kitchen.</em></h1>
+        <p class="hero-tagline">Baked for you</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#gallery">Browse the cakes</a>
+          <button type="button" class="button button-secondary" data-order>Start an enquiry</button>
+        </div>
+      </div>
+      <figure class="hero-figure">
+        <div class="photo-frame"><img src="/images/gallery/rose-celebration-cake.webp" alt="White cake decorated with deep red roses and gold accents" width="760" height="1351" fetchpriority="high"></div>
+        <figcaption><span>FROM MY KITCHEN</span><em>Rose celebration cake</em></figcaption>
+      </figure>
+    </section>
+    <div class="values">
+      <div class="shell values-inner">
+        <div class="values-window" id="values-window" role="region" aria-label="Bakery highlights">
+          <div class="values-track">
+            <div class="values-group" id="values-phrases">
+              <span>Baked for you<b aria-hidden="true">✳</b></span>
+              <span>Celebration cakes<b aria-hidden="true">✳</b></span>
+              <span>Buttercream blooms<b aria-hidden="true">✳</b></span>
+              <span>Custom creations<b aria-hidden="true">✳</b></span>
+              <span>Birthday favourites<b aria-hidden="true">✳</b></span>
+              <span>Pre-orders only<b aria-hidden="true">✳</b></span>
+            </div>
+            <div class="values-group" aria-hidden="true">
+              <span>Baked for you<b aria-hidden="true">✳</b></span>
+              <span>Celebration cakes<b aria-hidden="true">✳</b></span>
+              <span>Buttercream blooms<b aria-hidden="true">✳</b></span>
+              <span>Custom creations<b aria-hidden="true">✳</b></span>
+              <span>Birthday favourites<b aria-hidden="true">✳</b></span>
+              <span>Pre-orders only<b aria-hidden="true">✳</b></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="shell gallery" id="gallery" tabindex="-1" aria-labelledby="gallery-title">
+      <div class="gallery-heading">
+        <div>
+          <h2 id="gallery-title">Cake gallery</h2>
+          <p>Browse cake designs and choose a flavour when you enquire.</p>
+        </div>
+        <a class="button button-secondary" href="/gallery">View all photos</a>
+      </div>
+      <div class="gallery-grid">
+        <article class="gallery-cake">
+          <img src="/images/gallery/lavender-tiered-cake.webp" alt="Two-tier lavender cake with purple sugar roses and gold spheres" width="855" height="1520" loading="lazy" decoding="async" style="--photo-position: 55%">
+          <div class="gallery-copy">
+            <h3>Lavender tiered cake</h3>
+            <p class="gallery-flavour"><strong>Flavour</strong> Black currant</p>
+            <button type="button" class="button button-secondary gallery-enquiry" data-order data-gallery-design="Lavender tiered cake" data-gallery-flavour="Black currant" aria-label="Enquire about Lavender tiered cake">Enquire</button>
+          </div>
+        </article>
+        <article class="gallery-cake">
+          <img src="/images/gallery/heart-cake-and-dessert-box.webp" alt="Red heart-shaped cake displayed beside a box of brownies" width="760" height="1151" loading="lazy" decoding="async" style="--photo-position: 59%">
+          <div class="gallery-copy">
+            <h3>Heart cake and brownie box</h3>
+            <p class="gallery-flavour"><strong>Flavour</strong> Red velvet</p>
+            <button type="button" class="button button-secondary gallery-enquiry" data-order data-gallery-design="Heart cake and brownie box" data-gallery-flavour="Red velvet" aria-label="Enquire about Heart cake and brownie box">Enquire</button>
+          </div>
+        </article>
+        <article class="gallery-cake">
+          <img src="/images/gallery/gender-reveal-cake.webp" alt="White cake with baby-blue and pink frosting and a Boy or girl message" width="760" height="1351" loading="lazy" decoding="async" style="--photo-position: 60%">
+          <div class="gallery-copy">
+            <h3>Gender reveal cake</h3>
+            <p class="gallery-flavour"><strong>Flavour</strong> Vanilla</p>
+            <button type="button" class="button button-secondary gallery-enquiry" data-order data-gallery-design="Gender reveal cake" data-gallery-flavour="Vanilla" aria-label="Enquire about Gender reveal cake">Enquire</button>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="shell menu" id="cake-menu" tabindex="-1" aria-labelledby="menu-title">
+      <div class="menu-panel">
+        <div class="menu-heading">
+          <h2 id="menu-title">Cake menu</h2>
+          <p>Browse 41 cakes, from vanilla sponge and red velvet to chocolate truffle and mango. Prices are listed for ½ kg and 1 kg where available.</p>
+        </div>
+        <details class="full-menu" id="full-menu">
+          <summary class="button button-primary">
+            <span class="menu-show">View full menu</span><span class="menu-hide">Hide full menu</span>
+          </summary>
+          <div class="full-menu-content">
+            <p class="menu-guide">Choose a cake to enquire. For cakes with one listed price, ask about the size.</p>
+            <div class="menu-tools" id="menu-tools" hidden>
+              <div><label for="cake-search">Find a cake</label><input type="search" id="cake-search" placeholder="Try chocolate or blueberry"></div>
+              <div>
+                <label for="cake-sort">Sort by</label>
+                <div class="select-field">
+                  <select id="cake-sort">
+                    <option value="">Menu order</option>
+                    <option value="name:asc">Name A–Z</option>
+                    <option value="name:desc">Name Z–A</option>
+                    <option value="½ kg:asc">½ kg price: low to high</option>
+                    <option value="½ kg:desc">½ kg price: high to low</option>
+                    <option value="1 kg:asc">1 kg price: low to high</option>
+                    <option value="1 kg:desc">1 kg price: high to low</option>
+                  </select>
+                </div>
+              </div>
+              <p id="menu-count" role="status"></p>
+            </div>
+            <table class="price-table" aria-label="Cake names and prices">
+              <thead><tr><th scope="col">Cake</th><th scope="col">½ kg</th><th scope="col">1 kg</th></tr></thead>
+              <tbody>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Vanilla Sponge Cake</button></th><td><span data-price="½ kg">₹400</span></td><td><span data-price="1 kg">₹700</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Black Forest Cake</button></th><td><span data-price="½ kg">₹500</span></td><td><span data-price="1 kg">₹950</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>White Forest Cake</button></th><td><span data-price="½ kg">₹500</span></td><td><span data-price="1 kg">₹900</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Red Velvet Cake</button></th><td><span data-price="½ kg">₹550</span></td><td><span data-price="1 kg">₹900</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Red Velvet with Cream Cheese</button></th><td><span data-price="½ kg">₹650</span></td><td><span data-price="1 kg">₹1,100</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Butterscotch Cake</button></th><td><span data-price="½ kg">₹550</span></td><td><span data-price="1 kg">₹950</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Chocolate Cake</button></th><td><span data-price="½ kg">₹550</span></td><td><span data-price="1 kg">₹950</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Vancho Cake</button></th><td><span data-price="½ kg">₹550</span></td><td><span data-price="1 kg">₹950</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Oreo Cake</button></th><td><span data-price="½ kg">₹650</span></td><td><span data-price="1 kg">₹1,150</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Pineapple Cake</button></th><td><span data-price="½ kg">₹550</span></td><td><span data-price="1 kg">₹900</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Mango Cake</button></th><td><span data-price="½ kg">₹550</span></td><td><span data-price="1 kg">₹900</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Pistachio Cake</button></th><td><span data-price="½ kg">₹550</span></td><td><span data-price="1 kg">₹900</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>KitKat Cake</button></th><td><span data-price="½ kg">₹750</span></td><td><span data-price="1 kg">₹1,350</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Doll Cake</button></th><td><span data-price="½ kg">₹700</span></td><td><span data-price="1 kg">₹1,350</span></td></tr>
+                <tr data-cake-row id="cake-chocolate-truffle"><th scope="row"><button type="button" class="cake-link" data-cake>Chocolate Truffle Cake</button></th><td><span data-price="½ kg">₹550</span></td><td><span data-price="1 kg">₹950</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>White Truffle Cake</button></th><td><span data-price="½ kg">₹550</span></td><td><span data-price="1 kg">₹950</span></td></tr>
+                <tr data-cake-row id="cake-strawberry"><th scope="row"><button type="button" class="cake-link" data-cake>Strawberry Cake</button></th><td><span data-price="½ kg">₹500</span></td><td><span data-price="1 kg">₹850</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Tender Coconut Cake</button></th><td><span data-price="½ kg">₹650</span></td><td><span data-price="1 kg">₹1,100</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Tres Leches Cake</button></th><td><span data-price="½ kg">₹650</span></td><td><span data-price="1 kg">₹1,200</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Bounty Cake</button></th><td><span data-price="½ kg">₹600</span></td><td><span data-price="1 kg">₹1,150</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Raffaello Cake</button></th><td><span data-price="½ kg">₹650</span></td><td><span data-price="1 kg">₹1,150</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Almond Cake</button></th><td><span data-price="½ kg">₹700</span></td><td><span data-price="1 kg">₹1,300</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Choconut Cake</button></th><td><span data-price="½ kg">₹500</span></td><td><span data-price="1 kg">₹900</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Milky Nut Cake</button></th><td><span data-price="½ kg">₹650</span></td><td><span data-price="1 kg">₹1,150</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Ferrero Richer Cake</button></th><td><span data-price="½ kg">₹800</span></td><td><span data-price="1 kg">₹1,350</span></td></tr>
+                <tr data-cake-row id="cake-blueberry"><th scope="row"><button type="button" class="cake-link" data-cake>Blueberry Cake</button></th><td><span data-price="½ kg">₹500</span></td><td><span data-price="1 kg">₹950</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Nutella Cake</button></th><td><span data-price="½ kg">₹750</span></td><td><span data-price="1 kg">₹1,350</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Rainbow Cake</button></th><td colspan="2"><span data-price="">₹1,300</span><small class="single-price-note">Ask for size</small></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Ferrero with Nutella</button></th><td><span data-price="½ kg">₹800</span></td><td><span data-price="1 kg">₹1,400</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Chocolate Strawberry Cake</button></th><td><span data-price="½ kg">₹650</span></td><td><span data-price="1 kg">₹1,150</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Spanish Delight Cake</button></th><td><span data-price="½ kg">₹550</span></td><td><span data-price="1 kg">₹1,100</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Rich Chocolate Truffle Cake</button></th><td><span data-price="½ kg">₹750</span></td><td><span data-price="1 kg">₹1,350</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Hazelnut Praline Chocolate Cake</button></th><td><span data-price="½ kg">₹900</span></td><td><span data-price="1 kg">₹1,150</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Rich Chocolate Truffle with Nutella Hazelnut</button></th><td><span data-price="½ kg">₹850</span></td><td><span data-price="1 kg">₹1,600</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Nutty Bubble Cake</button></th><td><span data-price="½ kg">₹550</span></td><td><span data-price="1 kg">₹950</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Milk Chocolate Cake with Hazelnut</button></th><td><span data-price="½ kg">₹900</span></td><td><span data-price="1 kg">₹1,800</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>White Truffle with Almond</button></th><td><span data-price="½ kg">₹650</span></td><td><span data-price="1 kg">₹1,150</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Death by Chocolate</button></th><td><span data-price="½ kg">₹700</span></td><td><span data-price="1 kg">₹1,200</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Milk Cake (Pistachio, Classic)</button></th><td><span data-price="½ kg">₹600</span></td><td><span data-price="1 kg">₹1,000</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Caramel Cake</button></th><td><span data-price="½ kg">₹500</span></td><td><span data-price="1 kg">₹900</span></td></tr>
+                <tr data-cake-row><th scope="row"><button type="button" class="cake-link" data-cake>Black Currant</button></th><td><span data-price="½ kg">₹550</span></td><td><span data-price="1 kg">₹950</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+      </div>
+    </section>
+    <section class="about" id="about" tabindex="-1" aria-labelledby="about-title">
+      <div class="shell about-inner">
+        <div class="about-image"><img src="/images/gallery/marbled-treat-boxes.webp" alt="Three open treat boxes with chocolate and green marbled toppings" width="760" height="1351" loading="lazy" decoding="async"></div>
+        <div class="about-copy">
+          <div class="eyebrow"><span class="little-star" aria-hidden="true">✳</span> MEET THE BAKER</div>
+          <h2 id="about-title">Haifa <em>Thasneem</em></h2>
+          <p>I’m the home baker behind The CakeFairy. I bake celebration cakes by pre-order in Somwarpet, Kodagu.</p>
+          <p>Have a gathering coming up? Tell me what you have in mind, how many people you’re feeding, and when you’d like your cake.</p>
+          <button type="button" class="button button-primary" data-order>Put together an enquiry</button>
+        </div>
+      </div>
+    </section>
+    <section class="shell faq" id="faq" tabindex="-1" aria-labelledby="faq-title">
+      <div><div class="eyebrow"><span class="little-star" aria-hidden="true">✳</span> BEFORE YOU ORDER</div><h2 id="faq-title">A few good<br>questions</h2></div>
+      <div class="faq-list">
+        <details><summary>How do I enquire about a cake?</summary><p>Choose a cake from the gallery or menu to start a WhatsApp draft. Include your preferred pickup date, cake size, and any design ideas. You can also message me directly using the WhatsApp button.</p></details>
+        <details><summary>How do I arrange pickup?</summary><p>Share your preferred date on WhatsApp. I’ll confirm availability and share pickup details in Somwarpet.</p></details>
+        <details><summary>Can I request something off the menu?</summary><p>Add your idea in the enquiry notes. Flavour, serving size, and occasion are helpful details to include.</p></details>
+        <details><summary>What if I have a food allergy?</summary><p>Ask the baker directly about ingredients and cross-contact before placing an order.</p></details>
+      </div>
+    </section>
+    <section class="reviews" id="reviews" tabindex="-1" aria-labelledby="reviews-title">
+      <div class="shell reviews-inner">
+        <div class="reviews-heading">
+          <div>
+            <h2 id="reviews-title">Customer reviews</h2>
+            <p id="review-summary" class="review-summary" role="status">Loading reviews…</p>
+          </div>
+          <button class="button button-primary" id="review-compose" type="button" aria-expanded="false" aria-controls="review-form" hidden>Write a review</button>
+          <button class="button button-primary" id="review-sign-in" type="button" hidden>Sign in to review</button>
+        </div>
+        <noscript><p>Enable JavaScript to view or write customer reviews.</p></noscript>
+        <form class="review-form" id="review-form" hidden>
+          <p class="review-note">Your display name and review will appear on this page.</p>
+          <label class="form-label" for="review-name">Display name</label>
+          <input type="text" id="review-name" name="displayName" autocomplete="nickname" maxlength="40" required>
+          <fieldset>
+            <legend>Your rating</legend>
+            <div class="review-stars">
+              <label class="review-star"><input type="radio" name="rating" value="1" aria-label="1 star" required><span aria-hidden="true">★</span></label>
+              <label class="review-star"><input type="radio" name="rating" value="2" aria-label="2 stars" required><span aria-hidden="true">★</span></label>
+              <label class="review-star"><input type="radio" name="rating" value="3" aria-label="3 stars" required><span aria-hidden="true">★</span></label>
+              <label class="review-star"><input type="radio" name="rating" value="4" aria-label="4 stars" required><span aria-hidden="true">★</span></label>
+              <label class="review-star"><input type="radio" name="rating" value="5" aria-label="5 stars" required><span aria-hidden="true">★</span></label>
+            </div>
+          </fieldset>
+          <label class="form-label" for="review-text">Your review</label>
+          <textarea id="review-text" name="review" rows="4" maxlength="600" required></textarea>
+          <button class="button button-primary" id="review-submit" type="submit">Post review</button>
+        </form>
+        <p class="form-status" id="review-status" role="status"></p>
+        <div class="review-list" id="review-list"></div>
+        <button class="button button-secondary" id="review-more" type="button" hidden>Show more reviews</button>
+        <template id="review-template">
+          <article class="review-card">
+            <div class="review-card-heading">
+              <h3 data-review-name></h3>
+              <time data-review-date></time>
+            </div>
+            <p class="review-card-rating" data-review-rating></p>
+            <p class="review-card-text" data-review-text></p>
+          </article>
+        </template>
+      </div>
+    </section>
+    <section class="contact" id="contact" tabindex="-1" aria-labelledby="contact-title">
+      <div class="shell contact-inner">
+        <div><h2 id="contact-title">Let’s talk cake</h2><p>Pre-order from Haifa Thasneem in Somwarpet, Kodagu.</p></div>
+        <div class="contact-actions">
+          <a class="button button-primary" id="whatsapp-link" href="https://wa.me/918073030060" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+          <a class="contact-number" href="tel:+918073030060">+91 8073030060</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <a class="wordmark" href="#top" aria-label="The CakeFairy home">
+        <img class="brand-logo" src="images/cakefairy-logo.jpg" alt="" width="150" height="150">
+        <span>The CakeFairy<small>H O M E  B A K E R Y</small></span>
+      </a>
+      <div class="footer-column">
+        <p class="footer-tagline">Baked for you</p>
+        <p>Made with <span role="img" aria-label="love">♥️</span></p>
+      </div>
+      <div class="footer-column">
+        <p>Somwarpet, Kodagu</p>
+        <a href="https://www.instagram.com/the_cakefairy_20/">Instagram</a>
+        <small class="footer-copyright">© 2026 The CakeFairy</small>
+      </div>
+    </div>
+  </footer>
+  <dialog id="inquiry" aria-labelledby="inquiry-title">
+    <div class="dialog-header">
+      <h2 id="inquiry-title">Cake enquiry</h2>
+      <button class="close-button" type="button" data-close aria-label="Close cake enquiry" autofocus>×</button>
+    </div>
+    <form id="inquiry-form">
+      <p class="inquiry-intro">Add your cake details to a WhatsApp draft for the baker.</p>
+      <p class="enquiry-design" id="enquiry-design" hidden></p>
+      <label class="form-label" for="cake-choice">Cake or flavour <span>(optional)</span></label>
+      <div class="select-field">
+        <select id="cake-choice" name="cake">
+          <option value="">Choose a cake or ask about a custom order</option>
+        </select>
+      </div>
+      <div id="cake-size-field" hidden>
+        <label class="form-label" for="cake-size">Cake size <span>(optional)</span></label>
+        <div class="select-field">
+          <select id="cake-size" name="size" disabled>
+            <option value="">Choose a size</option>
+          </select>
+        </div>
+      </div>
+      <p class="enquiry-price" id="enquiry-price" hidden></p>
+      <label class="form-label" for="pickup">Preferred pickup date <span>(optional)</span></label>
+      <input id="pickup" name="pickup" type="date">
+      <label class="form-label" for="notes">Cake details <span>(optional)</span></label>
+      <textarea id="notes" name="notes" rows="3" maxlength="1200" placeholder="Size, occasion, flavour, or design ideas"></textarea>
+      <p class="form-status" id="form-status" role="status"></p>
+      <div class="dialog-actions">
+        <button class="button button-primary" type="submit" value="whatsapp">Open in WhatsApp</button>
+        <button class="button" type="submit" value="copy">Copy enquiry</button>
+        <button class="button" type="submit" value="download">Download draft</button>
+      </div>
+      <textarea class="copy-fallback" id="copy-fallback" aria-label="Enquiry draft" rows="6" readonly hidden></textarea>
+    </form>
+  </dialog>
+</body>
+</html>

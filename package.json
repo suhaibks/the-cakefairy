@@ -1,0 +1,13 @@
+{
+  "name": "the-cakefairy",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
+  "dependencies": {
+    "@clerk/backend": "^3.31.4",
+    "@neondatabase/serverless": "^1.2.1"
+  }
+}
