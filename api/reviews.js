@@ -1,9 +1,10 @@
 import { createClerkClient } from "@clerk/backend";
 import { neon } from "@neondatabase/serverless";
 
-const { CLERK_PUBLISHABLE_KEY, CLERK_SECRET_KEY, DATABASE_URL } = process.env;
-const clerk = CLERK_PUBLISHABLE_KEY && CLERK_SECRET_KEY
-  ? createClerkClient({ publishableKey: CLERK_PUBLISHABLE_KEY, secretKey: CLERK_SECRET_KEY })
+const { CLERK_SECRET_KEY, DATABASE_URL } = process.env;
+const publishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY ?? process.env.CLERK_PUBLISHABLE_KEY;
+const clerk = publishableKey && CLERK_SECRET_KEY
+  ? createClerkClient({ publishableKey, secretKey: CLERK_SECRET_KEY })
   : null;
 const sql = DATABASE_URL ? neon(DATABASE_URL) : null;
 const pageSize = 12;
@@ -42,7 +43,7 @@ async function listReviews(authorId, url) {
     ...summary,
     canReview: Boolean(authorId),
     ownReview: ownReviews?.[0] ?? null,
-    clerkPublishableKey: clerk ? CLERK_PUBLISHABLE_KEY : null,
+    clerkPublishableKey: clerk ? publishableKey : null,
   });
 }
 
