@@ -49,7 +49,14 @@ nav a:hover { text-decoration: underline; text-underline-offset: .25em; }
 
 .hero { display: grid; grid-template-columns: .95fr 1.05fr; align-items: center; gap: 3.5rem; padding-block: clamp(2.5rem, 4.4vw, 4.6rem) clamp(2.3rem, 4vw, 3.6rem); }
 .eyebrow { display: flex; align-items: center; gap: .52rem; color: var(--rose); font-size: .77rem; font-weight: 700; letter-spacing: .145em; }
-.little-star { font: 1.05rem/1 Georgia, serif; }
+.little-star, .values-group > span::after {
+  flex: none;
+  width: .9rem;
+  height: .9rem;
+  background: currentColor;
+  clip-path: polygon(50% 0%, 58% 31%, 85% 15%, 69% 42%, 100% 50%, 69% 58%, 85% 85%, 58% 69%,
+    50% 100%, 42% 69%, 15% 85%, 31% 58%, 0% 50%, 31% 42%, 15% 15%, 42% 31%);
+}
 .hero h1 { font-size: clamp(3.8rem, 7.35vw, 7.1rem); line-height: .93; letter-spacing: -.065em; margin: 1.2rem 0; }
 .hero h1 em, .about h2 em { color: var(--rose); font-weight: 400; }
 .hero .hero-tagline { margin: -.25rem 0 .6rem; color: var(--rose); font-family: var(--serif); font-size: clamp(1.35rem, 2.3vw, 1.85rem); font-style: italic; line-height: 1.25; }
@@ -67,13 +74,13 @@ nav a:hover { text-decoration: underline; text-underline-offset: .25em; }
 .values-track { width: 100%; }
 .values-group { display: flex; align-items: center; justify-content: space-evenly; flex-wrap: wrap; gap: .4rem 1.25rem; padding: .65rem .35rem; }
 .values-group span { display: inline-flex; align-items: center; white-space: nowrap; }
-.values-group[aria-hidden="true"], .values-group b { display: none; }
+.values-group[aria-hidden="true"] { display: none; }
 
 @media (prefers-reduced-motion: no-preference) {
   .values-window[data-sliding] { overflow: hidden; cursor: pointer; }
   .values-window[data-sliding] .values-track { display: flex; width: max-content; animation: values-slide var(--slide-duration, 36s) linear infinite; }
   .values-window[data-sliding] .values-group { display: flex; flex: 0 0 auto; min-width: 100cqw; flex-wrap: nowrap; gap: 0; padding-block: 0; }
-  .values-window[data-sliding] .values-group b { display: inline; margin-inline: clamp(.72rem, 2.25vw, 1.8rem); color: var(--rose); font: .93rem/1 Georgia, serif; }
+  .values-window[data-sliding] .values-group > span::after { content: ""; margin-inline: clamp(.72rem, 2.25vw, 1.8rem); color: var(--rose); }
   .values-window[aria-pressed="true"] .values-track { animation-play-state: paused; }
 }
 
